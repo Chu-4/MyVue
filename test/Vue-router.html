@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/vue-router.js"></script>
+    <script src="js/vue.js"></script>
+    <link rel="stylesheet" href="router-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="nav">
+            <router-link to="/vue">
+                <div class="cell">简易vue</div> 
+            </router-link>
+            <router-link to="/es6">
+                <div class="cell">趣味ES6</div>
+            </router-link>
+            <router-link to="/career">
+                <div class="cell">人在职场</div>
+            </router-link>
+        </div>
+        <div class="content">
+            <router-view></router-view>
+        </div>
+    </div>
+
+    <script>
+        Vue.use(VueRouter); //注册插件
+        const vueComponent = {
+            template:`<div>
+                这里是《简易vue》教程
+                </div>`
+        };
+        const es6Component = {
+            template:`<div>
+                这里是《趣味ES6》教程
+                </div>`
+        };
+        const careerComponent = {
+            template:`<div>
+                《工资待遇》
+                </div>`
+        };
+        const router = new VueRouter({
+            routes:[
+                {
+                    path:"/vue",
+                    component:vueComponent
+                },
+                {
+                    path:"/es6",
+                    component:es6Component
+                },
+                {
+                    path:"/career",
+                    component:careerComponent
+                }
+            ]
+        })
+
+        
+
+        const app = new Vue({
+            el:'#app',
+            router
+          })
+
+    </script>
+</body>
+</html>

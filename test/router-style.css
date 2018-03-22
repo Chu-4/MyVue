@@ -1,0 +1,42 @@
+body{
+    background: #ccc;
+    text-decoration: none;
+}
+
+.nav{
+    position: absolute;
+    width: 35%;
+    height: 97%;
+    background: rgb(228, 228, 228);
+    float: left;
+    border: 1px solid rgb(175, 174, 174);
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.cell{  
+    height: 13%;
+    width: 100%;
+    border-bottom: 1px solid  rgb(175, 174, 174);
+    text-align: center;
+    line-height: 82.5px; 
+    
+}
+
+/* .router-link-active{
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+} *//*当前点击事件样式*/
+
+.content{
+    position:relative;
+    left: 20%;
+    /* float: right; */
+    text-align: center;
+    line-height: 550px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(94, 94, 94);
+}
